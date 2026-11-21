@@ -738,8 +738,39 @@ em { font-style: normal; }
 }
 .south-art::before { background: radial-gradient(circle at 55% 24%, rgba(255, 248, 235, .32), transparent 40%), linear-gradient(180deg, rgba(132, 92, 69, .08), rgba(88, 54, 40, .16)); }
 .split-ink { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 0; opacity: .9; }
-.split-art-caption { position: absolute; z-index: 2; bottom: 22px; left: 50%; transform: translateX(-50%); color: var(--muted); font-family: var(--font-kai); font-size: 9px; letter-spacing: .22em; writing-mode: vertical-rl; }
-.south .split-art-caption { color: var(--cinnabar); opacity: .6; }
+.split-art-caption {
+  position: absolute;
+  z-index: 3;
+  bottom: 18px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 3px 8px;
+  border: 1px solid rgba(38, 51, 45, .14);
+  background: rgba(242, 236, 223, .78);
+  color: var(--ink-mid);
+  font-family: var(--font-kai);
+  font-size: 10px;
+  line-height: 1.5;
+  letter-spacing: .1em;
+  white-space: nowrap;
+  writing-mode: horizontal-tb;
+}
+.split-art-caption::before {
+  content: "";
+  width: 14px;
+  height: 1px;
+  background: var(--cinnabar);
+  opacity: .55;
+}
+.south .split-art-caption { color: var(--cinnabar); background: rgba(248, 243, 233, .8); border-color: rgba(154, 57, 45, .17); }
+.south .split-art-caption::before { background: currentColor; }
+@media (max-width: 1180px) {
+  .split-art-caption { gap: 5px; padding: 3px 6px; font-size: 9px; letter-spacing: .06em; }
+  .split-art-caption::before { width: 10px; }
+}
 .split-art > span:not(.split-art-caption) { position: relative; z-index: 1; color: var(--ink-mid); font-family: var(--font-display); font-size: 62px; opacity: .35; line-height: 1.1; }
 .south .split-art > span:not(.split-art-caption) { color: var(--cinnabar); opacity: .48; }
 .split-content { padding: clamp(28px, 3.4vw, 48px); display: flex; flex-direction: column; align-items: flex-start; }
@@ -2125,6 +2156,7 @@ button.figure-chip:hover { color: var(--cinnabar); border-color: var(--cinnabar)
   .split-panel { grid-template-columns: 1fr; }
   .split-art { min-height: 78px; border-right: 0; border-bottom: 1px solid var(--line); justify-content: flex-end; align-items: center; padding: 0 25px; }
   .split-art > span:not(.split-art-caption) { font-size: 40px; }
+  .split-art-caption { left: 24px; bottom: 13px; transform: none; font-size: 10px; padding: 2px 7px; }
   .split-art::after { display: none; }
   .split-content { padding: 24px 22px 26px; }
   .split-content h3 { margin-top: 14px; font-size: 40px; }
