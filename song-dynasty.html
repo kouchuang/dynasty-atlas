@@ -747,12 +747,14 @@ em { font-style: normal; }
   display: inline-flex;
   align-items: center;
   gap: 7px;
-  padding: 3px 8px;
-  border: 1px solid rgba(38, 51, 45, .14);
-  background: rgba(242, 236, 223, .78);
-  color: var(--ink-mid);
+  padding: 4px 10px;
+  border: 1px solid rgba(38, 51, 45, .22);
+  background: rgba(250, 247, 239, .94);
+  box-shadow: 0 2px 12px rgba(18, 28, 22, .08);
+  color: var(--ink);
   font-family: var(--font-kai);
-  font-size: 10px;
+  font-size: 11px;
+  font-weight: 500;
   line-height: 1.5;
   letter-spacing: .1em;
   white-space: nowrap;
@@ -765,10 +767,10 @@ em { font-style: normal; }
   background: var(--cinnabar);
   opacity: .55;
 }
-.south .split-art-caption { color: var(--cinnabar); background: rgba(248, 243, 233, .8); border-color: rgba(154, 57, 45, .17); }
+.south .split-art-caption { color: var(--cinnabar); background: rgba(250, 247, 239, .94); border-color: rgba(154, 57, 45, .24); }
 .south .split-art-caption::before { background: currentColor; }
 @media (max-width: 1180px) {
-  .split-art-caption { gap: 5px; padding: 3px 6px; font-size: 9px; letter-spacing: .06em; }
+  .split-art-caption { gap: 5px; padding: 3px 7px; font-size: 9px; letter-spacing: .04em; }
   .split-art-caption::before { width: 10px; }
 }
 .split-art > span:not(.split-art-caption) { position: relative; z-index: 1; color: var(--ink-mid); font-family: var(--font-display); font-size: 62px; opacity: .35; line-height: 1.1; }
@@ -2156,7 +2158,7 @@ button.figure-chip:hover { color: var(--cinnabar); border-color: var(--cinnabar)
   .split-panel { grid-template-columns: 1fr; }
   .split-art { min-height: 78px; border-right: 0; border-bottom: 1px solid var(--line); justify-content: flex-end; align-items: center; padding: 0 25px; }
   .split-art > span:not(.split-art-caption) { font-size: 40px; }
-  .split-art-caption { left: 24px; bottom: 13px; transform: none; font-size: 10px; padding: 2px 7px; }
+  .split-art-caption { left: 24px; bottom: 13px; transform: none; font-size: 10px; padding: 3px 8px; }
   .split-art::after { display: none; }
   .split-content { padding: 24px 22px 26px; }
   .split-content h3 { margin-top: 14px; font-size: 40px; }
