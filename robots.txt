@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://kouchuang.github.io/dynasty-atlas/sitemap.xml

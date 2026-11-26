@@ -3,8 +3,9 @@
 一个面向中国历代王朝的数字历史展陈计划。当前收录第一展厅：**大宋风华（960—1279）**，后续将逐步补充唐、汉、明、清等朝代。
 
 - GitHub Pages 入口：<https://kouchuang.github.io/dynasty-atlas/>
-- 当前展览：`index.html` / `song-dynasty.html`
-- 本地使用：直接用浏览器打开 `song-dynasty.html`，无需联网、服务器或第三方依赖。
+- 完整源码：`index.html`
+- 本地使用：直接用浏览器打开 `index.html`，无需联网、服务器或第三方依赖。
+- 旧入口：`song-dynasty.html` 会自动跳转到展馆首页，保留旧链接兼容。
 
 ## 当前展览：大宋风华
 
@@ -16,20 +17,22 @@
 - 49 条历史纪事，支持时期、类型与疏密筛选。
 - 人物关系图支持筛选、拖拽、缩放、点击节点 / 连线；全站支持搜索和本地浏览状态保存。
 
-## 仓库规划
+## 仓库结构
 
 ```text
-/                  当前入口（大宋风华）
-/song-dynasty.html 单文件版本
+index.html            展馆正文（唯一维护源）
+song-dynasty.html     旧地址兼容，自动跳转首页
+og-image.png          社交分享卡片
+apple-touch-icon.png  iOS 主屏幕图标
+icon-192.png          应用图标
+icon-512.png          应用图标
+site.webmanifest      站点清单
+robots.txt / sitemap.xml
+404.html              GitHub Pages 404 页面
+.nojekyll             关闭 GitHub Pages 的 Jekyll 处理
 ```
 
-未来各朝代可以逐步整理为独立目录，例如：
-
-```text
-/tang/
-/han/
-/ming/
-```
+以后新增朝代时，建议使用独立目录，例如 `/tang/`、`/han/`，并通过总入口页串联各展厅。
 
 ## 史源与说明
 
@@ -37,6 +40,6 @@
 
 本仓库是个人学习性质的非官方历史数字展，不替代原始史料与专业研究，也不代表任何机构。
 
-## GitHub Pages
+## 部署
 
-`index.html` 是当前展览的发布入口副本。仓库启用 GitHub Pages（Deploy from branch → `main` → `/ (root)`）后，可直接访问根网址。
+GitHub Pages 使用 `main` 分支根目录发布。修改并推送 `index.html` 后，页面会自动重建。
